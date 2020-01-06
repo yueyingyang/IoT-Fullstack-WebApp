@@ -21,7 +21,7 @@ passport.use(
             clientSecret: keys.googleClientSecret,
             // After user come back from google, they will be sent to callback URL
             callbackURL: '/auth/google/callback',
-            // proxy: true
+            proxy: true
         },
         async (accessToken, refreshToken, profile, done) => {
             console.log(accessToken);
